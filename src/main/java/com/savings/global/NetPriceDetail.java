@@ -16,6 +16,18 @@ public class NetPriceDetail {
 	public BigDecimal getNetPrice(double grossPrice, String country) throws NoDataFoundException {
 		return service.calculateNetPrice(new BigDecimal(grossPrice), country); 
 	}
+	
+	public static void main(String[] args) {
+		NetPriceDetail netPrice = new NetPriceDetail();
+		try {
+			System.out.println("NetPrice for DE: " + netPrice.getNetPrice(100, DE));
+			System.out.println("NetPrice for FR: " +netPrice.getNetPrice(1.9, FR));
+		} catch (NoDataFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 
 }
