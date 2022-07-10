@@ -23,7 +23,6 @@ public class NetPriceDetail {
 			System.out.println("NetPrice for DE: " + netPrice.getNetPrice(100, DE));
 			System.out.println("NetPrice for FR: " +netPrice.getNetPrice(1.9, FR));
 		} catch (NoDataFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
